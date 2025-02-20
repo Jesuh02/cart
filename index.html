@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurante Comelón</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: system-ui, -apple-system, sans-serif;
+        }
+
+        body {
+            background-color: white;
+            min-height: 100vh;
+            padding: 2rem;
+        }
+
+        .container {
+            max-width: 1024px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #ea580c;
+            margin-bottom: 0.5rem;
+        }
+
+        header p {
+            font-size: 1.125rem;
+            color: #4b5563;
+        }
+
+        .card {
+            border-radius: 0.5rem;
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        .card-jugos {
+            background: linear-gradient(to right, #fff7ed, #ffedd5);
+        }
+
+        .card-asados {
+            background: linear-gradient(to right, #fef2f2, #fee2e2);
+        }
+
+        .card-hamburguesas {
+            background: linear-gradient(to right, #fefce8, #fef9c3);
+        }
+
+        .card-perros {
+            background: linear-gradient(to right, #eff6ff, #dbeafe);
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .card-jugos .section-title { color: #9a3412; }
+        .card-asados .section-title { color: #991b1b; }
+        .card-hamburguesas .section-title { color: #854d0e; }
+        .card-perros .section-title { color: #1e40af; }
+
+        .grid {
+            display: grid;
+            gap: 1.5rem;
+        }
+
+        @media (min-width: 768px) {
+            .grid-2 {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        .subsection-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: #b45309;
+        }
+
+        .precio-info {
+            color: #7c2d12;
+            font-weight: 500;
+            margin-bottom: 1rem;
+        }
+
+        .jugos-list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0.5rem;
+            color: #374151;
+        }
+
+        .special-item {
+            background: white;
+            padding: 0.75rem;
+            border-radius: 0.375rem;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+            margin-bottom: 0.75rem;
+        }
+
+        .special-item-title {
+            font-weight: 500;
+            color: #9a3412;
+            margin-bottom: 0.25rem;
+        }
+
+        .special-item-desc {
+            font-size: 0.875rem;
+            color: #4b5563;
+        }
+
+        .menu-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .menu-item span:first-child {
+            font-weight: 500;
+        }
+
+        .card-asados .menu-item span:last-child { color: #dc2626; }
+        .card-hamburguesas .menu-item span:last-child { color: #d97706; }
+        .card-perros .menu-item span:last-child { color: #2563eb; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Restaurante Comelón</h1>
+            <p>Sabores que te hacen feliz</p>
+        </header>
+
+        <!-- Jugos y Bebidas -->
+        <div class="card card-jugos">
+            <h2 class="section-title">Jugos y Bebidas</h2>
+            <div class="grid grid-2">
+                <div>
+                    <h3 class="subsection-title">Jugos Naturales</h3>
+                    <div class="precio-info">
+                        <p>Con leche: $7.000 (Para llevar $8.000)</p>
+                        <p>En agua: $6.000 (Para llevar $7.000)</p>
+                    </div>
+                    <div class="jugos-list">
+                        <div>• Zapote</div>
+                        <div>• Níspero</div>
+                        <div>• Guanábana</div>
+                        <div>• Mango</div>
+                        <div>• Mora</div>
+                        <div>• Fresa</div>
+                        <div>• Papaya</div>
+                        <div>• Banano</div>
+                        <div>• Melón</div>
+                        <div>• Maracuyá</div>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="subsection-title">Jugos Especiales</h3>
+                    <div class="special-item">
+                        <p class="special-item-title">Malteada Men ($8.000 / Llevar $9.000)</p>
+                        <p class="special-item-desc">Borojó, vitafer, miel, Kola granulada, vino Sansón, huevo codorniz, leche</p>
+                    </div>
+                    <div class="special-item">
+                        <p class="special-item-title">Malteada Fem ($8.000 / Llevar $9.000)</p>
+                        <p class="special-item-desc">Colágeno hidrolizado, leche de almendras, frutas, bananos, fresas</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Asados -->
+        <div class="card card-asados">
+            <h2 class="section-title">Asados</h2>
+            <div class="menu-item">
+                <span>Pechuga</span>
+                <span>$12.000</span>
+            </div>
+            <div class="menu-item">
+                <span>Costilla de cerdo BBQ</span>
+                <span>$20.000</span>
+            </div>
+            <div class="menu-item">
+                <span>Sobrebarriga</span>
+                <span>$15.000</span>
+            </div>
+        </div>
+
+        <!-- Hamburguesas -->
+        <div class="card card-hamburguesas">
+            <h2 class="section-title">Hamburguesas</h2>
+            <div class="menu-item">
+                <span>TRADICIONAL</span>
+                <span>$12.000</span>
+            </div>
+            <div class="menu-item">
+                <span>REINA COMELÓN</span>
+                <span>$25.000</span>
+            </div>
+            <div class="menu-item">
+                <span>REY COMELÓN</span>
+                <span>$25.000</span>
+            </div>
+        </div>
+
+        <!-- Perros Calientes y Papas -->
+        <div class="card card-perros">
+            <div class="grid grid-2">
+                <div>
+                    <h2 class="section-title">Perros Calientes</h2>
+                    <div class="menu-item">
+                        <span>SENCILLO</span>
+                        <span>$7.000</span>
+                    </div>
+                    <div class="menu-item">
+                        <span>PERRO COMELÓN</span>
+                        <span>$20.000</span>
+                    </div>
+                </div>
+                <div>
+                    <h2 class="section-title">Papas</h2>
+                    <div class="menu-item">
+                        <span>SALCHIPAPA</span>
+                        <span>$10.000</span>
+                    </div>
+                    <div class="menu-item">
+                        <span>PICADA COMELONA</span>
+                        <span>Desde $20.000</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
